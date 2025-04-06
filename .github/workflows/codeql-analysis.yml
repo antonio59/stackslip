@@ -1,0 +1,53 @@
+# Standard CodeQL analysis workflow
+# See: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#configuring-code-scanning-for-a-compiled-language
+
+name: "CodeQL Analysis"
+
+on:
+  push:
+    branches: [ "main", "master" ] # Adjust branch names if needed
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main", "master" ]
+  schedule:
+    - cron: '30 1 * * 0' # Run weekly on Sunday at 1:30 AM UTC
+
+permissions:
+  security-events: write # Required to upload CodeQL results
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # Override automatic language detection by changing the below list
+        # Supported options are ['csharp', 'cpp', 'go', 'java', 'javascript', 'python', 'ruby']
+        # Use 'javascript' for TypeScript, JavaScript, and related frameworks
+        language: ['javascript']
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+        # If you wish to specify custom queries, you can do so here or in a config file.
+        # By default, queries listed here will override any specified in a config file.
+        # queries: security-extended,security-and-quality
+
+    # Autobuild attempts to build any compiled languages (C/C++, C#, or Java).
+    # If this step fails, review the build logs to check configuration.
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v3
+
+    # Runs CodeQL analysis. This step produces SARIF file(s) for processing.
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:${{matrix.language}}"

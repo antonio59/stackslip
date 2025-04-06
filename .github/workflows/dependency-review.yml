@@ -1,0 +1,24 @@
+# Dependency Review Action
+# See: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+
+name: 'Dependency Review'
+on: [pull_request]
+
+permissions:
+  contents: read # Required to checkout the code
+  pull-requests: write # Required to add comments to the pull request
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v4
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v4
+        # You can customize the behavior of the action here
+        # For example, fail the workflow if vulnerabilities are found at a certain severity
+        # with:
+        #   fail-on-severity: 'critical' # Options: 'low', 'moderate', 'high', 'critical'
+        #   allow-licenses: 'MIT, Apache-2.0' # Specify allowed licenses
+        #   deny-licenses: 'GPL-3.0' # Specify denied licenses
