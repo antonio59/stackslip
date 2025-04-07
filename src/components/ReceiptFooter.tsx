@@ -1,14 +1,45 @@
-import { RefObject } from 'react'; // Removed unused React import
+import { useEffect, useRef } from 'react';
 import { format as formatDate } from 'date-fns';
+import JsBarcode from 'jsbarcode';
+import { useToast } from './ui/use-toast'; // Import useToast
 
 interface ReceiptFooterProps {
   displayName: string;
   couponCode: string;
   authCode: string;
-  barcodeRef: RefObject<SVGSVGElement>;
+  userId: number; // Add userId prop
 }
 
-export function ReceiptFooter({ displayName, couponCode, authCode, barcodeRef }: ReceiptFooterProps) {
+export function ReceiptFooter({ displayName, couponCode, authCode, userId }: ReceiptFooterProps) {
+  const barcodeRef = useRef<SVGSVGElement>(null);
+  const { toast } = useToast(); // Get toast function from the hook
+
+  // Effect to generate barcode when userId is available
+  useEffect(() => {
+    if (barcodeRef.current && userId) {
+      const stackOverflowUrl = `stackoverflow.com/users/${userId}`;
+      try {
+        JsBarcode(barcodeRef.current, stackOverflowUrl, {
+          format: "CODE128",
+          width: 2,
+          height: 50,
+          displayValue: true,
+          fontSize: 12,
+          font: 'monospace',
+          textMargin: 2,
+          margin: 10
+        });
+      } catch (barcodeError) {
+        console.error('Error generating barcode:', barcodeError);
+        toast({
+          title: "Barcode Error",
+          description: "Failed to generate barcode.",
+          variant: "destructive",
+        });
+      }
+    }
+  }, [userId, toast]); // Depend on userId and toast
+
   return (
     <>
       {/* Served By & Time */}

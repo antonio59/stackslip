@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'; // Removed unused React import
 import { Download, Share2 } from 'lucide-react'; // Keep only icons used directly here
 import { format as formatDate } from 'date-fns'; // Keep for getFileName
 import { toPng, toJpeg } from 'html-to-image';
-import JsBarcode from 'jsbarcode';
 import { Button } from './ui/button';
 import { useToast } from './ui/use-toast';
 import { useStackOverflowData } from '../hooks/useStackOverflowData';
@@ -34,7 +33,6 @@ export function Receipt({ show, username }: ReceiptProps) {
   } = useStackOverflowData();
   
   const receiptRef = useRef<HTMLDivElement>(null);
-  const barcodeRef = useRef<SVGSVGElement>(null);
   const { toast } = useToast(); // Keep toast for download/share errors
 
   // Effect to fetch data when component should be shown and username is provided
@@ -46,33 +44,6 @@ export function Receipt({ show, username }: ReceiptProps) {
     // so the receipt persists until a new username is generated.
     // Resetting happens within fetchData if needed.
   }, [show, username, fetchData]);
-
-  // Effect to generate barcode when userData is available
-  useEffect(() => {
-    if (barcodeRef.current && userData?.user_id) {
-      const stackOverflowUrl = `stackoverflow.com/users/${userData.user_id}`;
-      try {
-        JsBarcode(barcodeRef.current, stackOverflowUrl, {
-          format: "CODE128",
-          width: 2,
-          height: 50,
-          displayValue: true, // Keep displayValue true as it was before
-          fontSize: 12,
-          font: 'monospace',
-          textMargin: 2,
-          margin: 10
-        });
-      } catch (barcodeError) {
-        console.error('Error generating barcode:', barcodeError);
-        // Consider adding a toast notification here as well
-        toast({
-          title: "Barcode Error",
-          description: "Failed to generate barcode.",
-          variant: "destructive",
-        });
-      }
-    }
-  }, [userData, toast]); // Depend on userData and toast
 
   const getFileName = (format: string) => {
     return `stackslip_${formatDate(new Date(), 'yyyy-MM-dd')}.${format}`;
@@ -182,7 +153,7 @@ export function Receipt({ show, username }: ReceiptProps) {
           displayName={userData.display_name}
           couponCode={couponCode}
           authCode={authCode}
-          barcodeRef={barcodeRef}
+          userId={userData.user_id} // Pass userId for barcode generation
         />
       </div>
 
