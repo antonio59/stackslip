@@ -22,10 +22,12 @@ All notable changes to this project will be documented in this file.
 
 - Add git-cliff config for changelog generation
 - Add git-cliff config for changelog generation
+- Add git-cliff config for changelog generation
 - Update dependencies in package-lock.json
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 
 
