@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ### CI/CD
 
 - Add automatic changelog workflow
+- Add automatic changelog workflow
 
 ### Changes
 
@@ -20,6 +21,11 @@ All notable changes to this project will be documented in this file.
 ### Chores
 
 - Add git-cliff config for changelog generation
+- Add git-cliff config for changelog generation
 - Update dependencies in package-lock.json
+
+### Documentation
+
+- Update changelog [skip ci]
 
 
