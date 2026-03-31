@@ -11,6 +11,52 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 
+- Merge pull request #8 from antonio59/dependabot/npm_and_yarn/multi-64be452ea9
+
+Bump react-dom and @types/react-dom
+- Bump react-dom and @types/react-dom
+
+Bumps [react-dom](https://github.com/facebook/react/tree/HEAD/packages/react-dom) and [@types/react-dom](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/HEAD/types/react-dom). These dependencies needed to be updated together.
+
+Updates `react-dom` from 18.3.1 to 19.1.0
+- [Release notes](https://github.com/facebook/react/releases)
+- [Changelog](https://github.com/facebook/react/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/facebook/react/commits/v19.1.0/packages/react-dom)
+
+Updates `@types/react-dom` from 18.3.0 to 19.1.1
+- [Release notes](https://github.com/DefinitelyTyped/DefinitelyTyped/releases)
+- [Commits](https://github.com/DefinitelyTyped/DefinitelyTyped/commits/HEAD/types/react-dom)
+
+---
+updated-dependencies:
+- dependency-name: react-dom
+  dependency-version: 19.1.0
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+- dependency-name: "@types/react-dom"
+  dependency-version: 19.1.1
+  dependency-type: direct:development
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+- Merge pull request #2 from antonio59/dependabot/npm_and_yarn/cross-spawn-7.0.6
+
+Bump cross-spawn from 7.0.3 to 7.0.6
+- Bump cross-spawn from 7.0.3 to 7.0.6
+
+Bumps [cross-spawn](https://github.com/moxystudio/node-cross-spawn) from 7.0.3 to 7.0.6.
+- [Changelog](https://github.com/moxystudio/node-cross-spawn/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/moxystudio/node-cross-spawn/compare/v7.0.3...v7.0.6)
+
+---
+updated-dependencies:
+- dependency-name: cross-spawn
+  dependency-version: 7.0.6
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
 - Merge pull request #1 from antonio59/dependabot/npm_and_yarn/nanoid-3.3.11
 
 Bump nanoid from 3.3.7 to 3.3.11
@@ -46,6 +92,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
