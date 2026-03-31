@@ -1,4 +1,3 @@
-import { format } from 'date-fns';
 
 const SO_API_BASE = 'https://api.stackexchange.com/2.3';
 

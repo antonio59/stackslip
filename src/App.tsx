@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Header } from './components/Header';
 import { UsernameInput } from './components/UsernameInput';
 import { Receipt } from './components/Receipt';
