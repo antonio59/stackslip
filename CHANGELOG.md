@@ -141,6 +141,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- Upgrade all dependencies to latest versions
 - Add git-cliff config for changelog generation
 - Add git-cliff config for changelog generation
 - Add git-cliff config for changelog generation
@@ -148,6 +149,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
