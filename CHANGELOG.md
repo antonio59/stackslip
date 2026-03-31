@@ -11,6 +11,24 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 
+- Merge pull request #1 from antonio59/dependabot/npm_and_yarn/nanoid-3.3.11
+
+Bump nanoid from 3.3.7 to 3.3.11
+- Bump nanoid from 3.3.7 to 3.3.11
+
+Bumps [nanoid](https://github.com/ai/nanoid) from 3.3.7 to 3.3.11.
+- [Release notes](https://github.com/ai/nanoid/releases)
+- [Changelog](https://github.com/ai/nanoid/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/ai/nanoid/compare/3.3.7...3.3.11)
+
+---
+updated-dependencies:
+- dependency-name: nanoid
+  dependency-version: 3.3.11
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
 - Add initial README with project overview and setup instructions
 - Move barcode generation logic from Receipt to ReceiptFooter component
 - Remove unused @rollup/rollup-darwin-arm64 dependency
@@ -28,6 +46,8 @@ All notable changes to this project will be documented in this file.
 
 ### Documentation
 
+- Update changelog [skip ci]
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 
