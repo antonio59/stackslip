@@ -11,6 +11,58 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 
+- Merge pull request #59 from antonio59/dependabot/npm_and_yarn/glob-10.5.0
+
+Bump glob from 10.4.5 to 10.5.0
+- Bump glob from 10.4.5 to 10.5.0
+
+Bumps [glob](https://github.com/isaacs/node-glob) from 10.4.5 to 10.5.0.
+- [Changelog](https://github.com/isaacs/node-glob/blob/main/changelog.md)
+- [Commits](https://github.com/isaacs/node-glob/compare/v10.4.5...v10.5.0)
+
+---
+updated-dependencies:
+- dependency-name: glob
+  dependency-version: 10.5.0
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+- Merge pull request #58 from antonio59/dependabot/npm_and_yarn/js-yaml-4.1.1
+
+Bump js-yaml from 4.1.0 to 4.1.1
+- Bump js-yaml from 4.1.0 to 4.1.1
+
+Bumps [js-yaml](https://github.com/nodeca/js-yaml) from 4.1.0 to 4.1.1.
+- [Changelog](https://github.com/nodeca/js-yaml/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/nodeca/js-yaml/compare/4.1.0...4.1.1)
+
+---
+updated-dependencies:
+- dependency-name: js-yaml
+  dependency-version: 4.1.1
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+- Merge pull request #14 from antonio59/dependabot/npm_and_yarn/vite-6.2.6
+
+Bump vite from 6.2.5 to 6.2.6
+- Bump vite from 6.2.5 to 6.2.6
+
+Bumps [vite](https://github.com/vitejs/vite/tree/HEAD/packages/vite) from 6.2.5 to 6.2.6.
+- [Release notes](https://github.com/vitejs/vite/releases)
+- [Changelog](https://github.com/vitejs/vite/blob/v6.2.6/packages/vite/CHANGELOG.md)
+- [Commits](https://github.com/vitejs/vite/commits/v6.2.6/packages/vite)
+
+---
+updated-dependencies:
+- dependency-name: vite
+  dependency-version: 6.2.6
+  dependency-type: direct:development
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
 - Merge pull request #8 from antonio59/dependabot/npm_and_yarn/multi-64be452ea9
 
 Bump react-dom and @types/react-dom
@@ -92,6 +144,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
