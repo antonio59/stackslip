@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
+### Bug Fixes
+
+- Align react/react-dom versions and resolve all security vulnerabilities
+
 ### CI/CD
 
 - Add automatic changelog workflow
@@ -144,6 +148,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
