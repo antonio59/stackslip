@@ -141,6 +141,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- **deps-dev**: Bump @types/node from 22.19.15 to 25.5.0 (#66)
 - Upgrade all dependencies to latest versions
 - Add git-cliff config for changelog generation
 - Add git-cliff config for changelog generation
@@ -149,6 +150,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
