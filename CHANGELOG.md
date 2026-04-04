@@ -141,6 +141,8 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- **deps-dev**: Bump eslint from 9.39.4 to 10.1.0 (#69)
+- **deps-dev**: Bump eslint-plugin-react-hooks from 5.2.0 to 7.0.1 (#67)
 - **deps-dev**: Bump @types/node from 22.19.15 to 25.5.0 (#66)
 - Upgrade all dependencies to latest versions
 - Add git-cliff config for changelog generation
@@ -150,6 +152,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
