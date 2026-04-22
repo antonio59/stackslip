@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 
 ### CI/CD
 
+- Add OSV Scanner workflow for dependency vulnerability scanning
 - Add automatic changelog workflow
 - Add automatic changelog workflow
 - Add automatic changelog workflow
@@ -141,6 +142,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- **deps-dev**: Bump flatted from 3.3.3 to 3.4.2 (#63)
 - **deps-dev**: Bump eslint from 9.39.4 to 10.1.0 (#69)
 - **deps-dev**: Bump eslint-plugin-react-hooks from 5.2.0 to 7.0.1 (#67)
 - **deps-dev**: Bump @types/node from 22.19.15 to 25.5.0 (#66)
@@ -152,6 +154,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
