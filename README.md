@@ -28,7 +28,7 @@ Follow these instructions to get a local copy up and running.
 ### Prerequisites
 
 *   Node.js (v18 or later recommended)
-*   npm or yarn
+*   pnpm
 
 ### Installation
 
@@ -37,19 +37,15 @@ Follow these instructions to get a local copy up and running.
     git clone <your-repo-url>
     cd stackslip
     ```
-2.  Install NPM packages:
+2.  Install dependencies:
     ```bash
-    npm install
-    # or
-    yarn install
+    pnpm install
     ```
 
 ### Running the Development Server
 
 ```bash
-npm run dev
-# or
-yarn dev
+pnpm dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) (or the port specified in the output) to view it in the browser.
