@@ -156,6 +156,8 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update README to use pnpm instead of npm/yarn
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
