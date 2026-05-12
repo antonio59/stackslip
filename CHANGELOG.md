@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 
+- Migrate to pnpm, fix vite path traversal vuln
 - Merge pull request #59 from antonio59/dependabot/npm_and_yarn/glob-10.5.0
 
 Bump glob from 10.4.5 to 10.5.0
@@ -155,6 +156,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
