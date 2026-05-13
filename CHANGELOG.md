@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
+- Remove --frozen-lockfile for pnpm v11 compatibility
 - Correct pnpm-workspace.yaml format for v11
 - Align react/react-dom versions and resolve all security vulnerabilities
 
@@ -158,6 +159,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update README to use pnpm instead of npm/yarn
