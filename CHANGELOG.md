@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
+- Correct pnpm-workspace.yaml format for v11
 - Align react/react-dom versions and resolve all security vulnerabilities
 
 ### CI/CD
@@ -157,6 +158,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update README to use pnpm instead of npm/yarn
 - Update changelog [skip ci]
