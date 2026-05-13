@@ -144,6 +144,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- Migrate to pnpm v11
 - **deps-dev**: Bump flatted from 3.3.3 to 3.4.2 (#63)
 - **deps-dev**: Bump eslint from 9.39.4 to 10.1.0 (#69)
 - **deps-dev**: Bump eslint-plugin-react-hooks from 5.2.0 to 7.0.1 (#67)
@@ -156,6 +157,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update README to use pnpm instead of npm/yarn
 - Update changelog [skip ci]
 - Update changelog [skip ci]
