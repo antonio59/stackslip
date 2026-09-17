@@ -1,4 +1,3 @@
-
 const SO_API_BASE = 'https://api.stackexchange.com/2.3';
 
 export interface StackOverflowUser {
@@ -49,9 +48,9 @@ export async function fetchUserData(usernameOrId: string): Promise<StackOverflow
     }
 
     // For username search, find exact match or take first result
-    const user = isUserId ? data.items[0] : 
-      data.items.find((item: any) => 
-        item.display_name.toLowerCase() === usernameOrId.toLowerCase()
+    const user = isUserId ? data.items[0] :
+      data.items.find((item: Partial<StackOverflowUser>) =>
+        item.display_name?.toLowerCase() === usernameOrId.toLowerCase()
       ) || data.items[0];
 
     if (!user) {
@@ -99,7 +98,7 @@ export async function fetchUserTags(userId: number): Promise<string[]> {
       return [];
     }
 
-    return data.items.map((tag: any) => tag.name);
+    return data.items.map((tag: { name: string }) => tag.name);
   } catch (error) {
     console.error('Error fetching user tags:', error);
     return [];

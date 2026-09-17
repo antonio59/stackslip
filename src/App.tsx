@@ -15,16 +15,18 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen p-6 sm:p-10">
       <Header />
-      <UsernameInput 
-        username={username}
-        setUsername={setUsername}
-        onGenerate={handleGenerate}
-      />
-      <div className="flex justify-center">
-        <Receipt show={showReceipt} username={username} />
-      </div>
+      <main>
+        <UsernameInput
+          username={username}
+          setUsername={setUsername}
+          onGenerate={handleGenerate}
+        />
+        <div className="flex justify-center">
+          <Receipt show={showReceipt} username={username} />
+        </div>
+      </main>
       <Toaster />
     </div>
   );

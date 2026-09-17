@@ -16,7 +16,17 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+      },
       colors: {
+        paper: "#f8f5ec",
+        ink: {
+          DEFAULT: "#23252a",
+          soft: "#5d6167",
+          faint: "#8b8e93",
+        },
+        stamp: "#b3401f",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

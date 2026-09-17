@@ -8,7 +8,7 @@ interface ReceiptStatsProps {
 
 export function ReceiptStats({ userData }: ReceiptStatsProps) {
   return (
-    <div className="border-b border-dashed border-gray-300 py-6 space-y-2">
+    <div className="border-b border-dashed border-ink-faint py-6 space-y-2">
       {/* Reputation */}
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
@@ -17,7 +17,7 @@ export function ReceiptStats({ userData }: ReceiptStatsProps) {
         </div>
         <span>{userData.reputation.toLocaleString()}</span>
       </div>
-      <div className="text-sm text-gray-600 pl-6 space-y-1">
+      <div className="text-xs text-ink-soft pl-6 space-y-1">
         <div className="flex justify-between">
           <span>THIS WEEK</span>
           <span>+{userData.reputation_change_week.toLocaleString()}</span>

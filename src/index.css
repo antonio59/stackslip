@@ -61,33 +61,33 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 14% 17%;
+    --foreground: 210 40% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 13% 20%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 13% 20%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 40% 96%;
+    --primary-foreground: 220 14% 14%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 12% 26%;
+    --secondary-foreground: 210 40% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 12% 26%;
+    --muted-foreground: 220 10% 62%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 220 12% 26%;
+    --accent-foreground: 210 40% 96%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 11% 30%;
+    --input: 220 11% 34%;
+    --ring: 210 40% 80%;
   }
 }
 
@@ -96,6 +96,75 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+    background-image: radial-gradient(1200px 600px at 50% -10%, hsl(220 14% 21%), transparent 70%);
+    background-repeat: no-repeat;
+  }
+}
+
+/* --- Receipt ---------------------------------------------------- */
+
+.receipt-paper {
+  background-color: theme("colors.paper");
+  color: theme("colors.ink.DEFAULT");
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.35),
+    0 14px 30px -8px rgb(0 0 0 / 0.5);
+}
+
+/* Torn edges: counter-coloured notches tiled inside the top and bottom edges.
+   Kept inside the paper box so html-to-image includes them in PNG/JPG export. */
+.receipt-edge {
+  --tooth-w: 12px;
+  --tooth-h: 9px;
+  position: relative;
+}
+.receipt-edge::before,
+.receipt-edge::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: var(--tooth-h);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: var(--tooth-w) var(--tooth-h);
+  pointer-events: none;
+}
+.receipt-edge::before {
+  top: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='9'><polygon points='0,0 12,0 6,9' fill='%23262b33'/></svg>");
+}
+.receipt-edge::after {
+  bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='9'><polygon points='0,9 12,9 6,0' fill='%23262b33'/></svg>");
+}
+
+/* Printed reveal: paper sweeps top-to-bottom like it is coming out of the slot. */
+.receipt-print {
+  animation: receipt-print 0.9s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+@keyframes receipt-print {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes receipt-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.receipt-blink {
+  animation: receipt-blink 1s steps(2, start) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .receipt-print,
+  .receipt-blink {
+    animation: none;
   }
 }

@@ -1,12 +1,23 @@
-
 export function Header() {
   return (
-    <div className="text-center mb-12">
-      <h1 className="text-4xl font-bold mb-4">StackOverflow Receipt</h1>
-      <p className="text-xl text-gray-600 mb-4">Generate a receipt-style summary of your StackOverflow profile</p>
-      <div className="text-gray-500">
-        made by Antonio | <a href="https://ko-fi.com/O4O416CKYY" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">buy Antonio a coffee</a>
-      </div>
-    </div>
+    <header className="text-center mb-10">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+        STACKSLIP
+      </h1>
+      <p className="mt-3 text-sm text-muted-foreground">
+        Your Stack Overflow activity, itemized.
+      </p>
+      <p className="mt-5 text-xs text-muted-foreground/70">
+        made by Antonio ·{" "}
+        <a
+          href="https://ko-fi.com/O4O416CKYY"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 hover:text-foreground transition-colors"
+        >
+          buy him a coffee
+        </a>
+      </p>
+    </header>
   );
 }

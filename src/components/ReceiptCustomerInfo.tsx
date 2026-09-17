@@ -10,15 +10,15 @@ export function ReceiptCustomerInfo({ displayName, userId }: ReceiptCustomerInfo
   const stackOverflowUrl = `stackoverflow.com/users/${userId}`;
 
   return (
-    <div className="border-b border-dashed border-gray-300 py-4">
+    <div className="border-b border-dashed border-ink-faint py-4">
       <p className="font-bold">CUSTOMER: {displayName}</p>
-      <div className="text-gray-600 flex items-center gap-2">
+      <div className="text-ink-soft flex items-center gap-2">
         <LinkIcon size={14} />
         <a
           href={`https://${stackOverflowUrl}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-500 transition-colors"
+          className="hover:text-blue-700 transition-colors"
         >
           {stackOverflowUrl}
         </a>

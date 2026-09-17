@@ -114,11 +114,11 @@ export function Receipt({ show, username }: ReceiptProps) {
     }
   };
 
-  // Display loading state
+  // Display loading state as a short stub feeding out of the printer
   if (loading) {
     return (
-      <div className="flex justify-center items-center p-8 text-gray-500 font-mono">
-        Generating StackSlip...
+      <div className="receipt-paper receipt-edge w-full max-w-[340px] px-6 py-6 text-center text-xs text-ink-soft" role="status">
+        PRINTING<span className="receipt-blink">_</span>
       </div>
     );
   }
@@ -128,8 +128,9 @@ export function Receipt({ show, username }: ReceiptProps) {
      // Optionally, display the error message if an error occurred
      if (error && show) {
        return (
-         <div className="flex justify-center items-center p-8 text-red-500 font-mono">
-           Error: {error}
+         <div className="receipt-paper receipt-edge w-full max-w-[340px] px-6 py-6 text-center" role="alert">
+           <p className="text-xs font-bold text-stamp">** ERROR **</p>
+           <p className="mt-2 text-xs text-ink-soft">{error}</p>
          </div>
        );
      }
@@ -140,21 +141,23 @@ export function Receipt({ show, username }: ReceiptProps) {
 
 
   return (
-    <div className="space-y-4">
-      {/* The actual receipt content */}
-      <div ref={receiptRef} className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full font-mono">
-        <ReceiptHeader userId={userData.user_id} />
-        <ReceiptCustomerInfo
-          displayName={userData.display_name}
-          userId={userData.user_id}
-        />
-        <ReceiptStats userData={userData} />
-        <ReceiptFooter
-          displayName={userData.display_name}
-          couponCode={couponCode}
-          authCode={authCode}
-          userId={userData.user_id} // Pass userId for barcode generation
-        />
+    <div className="w-full max-w-[340px] space-y-5">
+      {/* The actual receipt content — prints top-to-bottom on generate */}
+      <div className="receipt-print">
+        <div ref={receiptRef} className="receipt-paper receipt-edge px-6 pb-8 pt-9 text-[13px] leading-relaxed">
+          <ReceiptHeader userId={userData.user_id} />
+          <ReceiptCustomerInfo
+            displayName={userData.display_name}
+            userId={userData.user_id}
+          />
+          <ReceiptStats userData={userData} />
+          <ReceiptFooter
+            displayName={userData.display_name}
+            couponCode={couponCode}
+            authCode={authCode}
+            userId={userData.user_id} // Pass userId for barcode generation
+          />
+        </div>
       </div>
 
       <div className="flex justify-center gap-4">
