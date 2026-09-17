@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
+- Adapt receipt styles to Tailwind v4, repair pnpm-workspace.yaml
 - Remove --frozen-lockfile for pnpm v11 compatibility
 - Correct pnpm-workspace.yaml format for v11
 - Align react/react-dom versions and resolve all security vulnerabilities
@@ -19,6 +20,20 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 
+- Redesign as thermal receipt, harden for Cloudflare Pages deploy
+
+Restyle the UI around the receipt concept: JetBrains Mono, dark
+countertop theme, torn paper edges (drawn inside the paper box so
+html-to-image export keeps them), and a top-to-bottom print reveal
+that respects prefers-reduced-motion. Move the username form to a
+real submit handler with a label and input limits.
+
+Add Pages _headers with a strict CSP and security headers, fix all
+eslint errors, and run npm audit fix (0 vulnerabilities).
+
+Generated with [Devin](https://devin.ai)
+
+Co-Authored-By: Devin <158243242+devin-ai-integration[bot]@users.noreply.github.com>
 - Migrate to pnpm, fix vite path traversal vuln
 - Merge pull request #59 from antonio59/dependabot/npm_and_yarn/glob-10.5.0
 
@@ -159,6 +174,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
