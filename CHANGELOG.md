@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
+- Update ko-fi link to antoniojasmith
 - Adapt receipt styles to Tailwind v4, repair pnpm-workspace.yaml
 - Remove --frozen-lockfile for pnpm v11 compatibility
 - Correct pnpm-workspace.yaml format for v11
@@ -161,6 +162,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- Commit pnpm-lock.yaml for reproducible installs
 - Migrate to pnpm v11
 - **deps-dev**: Bump flatted from 3.3.3 to 3.4.2 (#63)
 - **deps-dev**: Bump eslint from 9.39.4 to 10.1.0 (#69)
@@ -174,6 +176,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
