@@ -10,7 +10,7 @@ export function Header() {
       <p className="mt-5 text-xs text-muted-foreground/70">
         made by Antonio ·{" "}
         <a
-          href="https://ko-fi.com/O4O416CKYY"
+          href="https://ko-fi.com/antoniojasmith"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-foreground transition-colors"
