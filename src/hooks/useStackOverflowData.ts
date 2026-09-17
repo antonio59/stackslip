@@ -2,6 +2,14 @@ import { useState, useCallback } from 'react'; // Removed unused useEffect
 import { fetchUserData, fetchUserTags, type StackOverflowUser } from '../services/stackOverflowApi';
 import { useToast } from '../components/ui/use-toast';
 
+// Decorative receipt codes — still uses a CSPRNG so the values are
+// unpredictable if this code is ever repurposed for something real.
+function randomCode(alphabet: string, length: number): string {
+  const bytes = new Uint8Array(length);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('');
+}
+
 interface UseStackOverflowDataResult {
   userData: StackOverflowUser | null;
   userTags: string[];
@@ -42,8 +50,8 @@ export function useStackOverflowData(): UseStackOverflowDataResult {
       if (!mounted) return;
 
       setUserTags(tags);
-      setCouponCode(Math.random().toString(36).substring(2, 8).toUpperCase());
-      setAuthCode(Math.random().toString().substring(2, 8));
+      setCouponCode(randomCode('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 6));
+      setAuthCode(randomCode('0123456789', 6));
 
     } catch (err) {
       if (!mounted) return;
