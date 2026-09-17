@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
+- Use crypto.getRandomValues for receipt codes
 - Update ko-fi link to antoniojasmith
 - Adapt receipt styles to Tailwind v4, repair pnpm-workspace.yaml
 - Remove --frozen-lockfile for pnpm v11 compatibility
@@ -176,6 +177,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
