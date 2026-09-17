@@ -23,6 +23,14 @@
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
 
+  --color-paper: #f8f5ec;
+  --color-ink: #23252a;
+  --color-ink-soft: #5d6167;
+  --color-ink-faint: #8b8e93;
+  --color-stamp: #b3401f;
+
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 }
@@ -105,8 +113,8 @@
 /* --- Receipt ---------------------------------------------------- */
 
 .receipt-paper {
-  background-color: theme("colors.paper");
-  color: theme("colors.ink.DEFAULT");
+  background-color: var(--color-paper);
+  color: var(--color-ink);
   box-shadow:
     0 1px 2px rgb(0 0 0 / 0.35),
     0 14px 30px -8px rgb(0 0 0 / 0.5);
