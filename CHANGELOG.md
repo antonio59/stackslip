@@ -164,6 +164,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- **deps-dev**: Bump eslint-plugin-react-refresh from 0.4.26 to 0.5.6 (#79)
 - Commit pnpm-lock.yaml for reproducible installs
 - Migrate to pnpm v11
 - **deps-dev**: Bump flatted from 3.3.3 to 3.4.2 (#63)
@@ -178,6 +179,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
