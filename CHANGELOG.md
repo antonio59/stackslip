@@ -164,6 +164,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
+- **deps-dev**: Bump eslint from 10.10.0 to 10.11.0 (#84)
 - **deps-dev**: Bump eslint-plugin-react-refresh from 0.5.6 to 0.5.7 (#81)
 - **deps-dev**: Bump eslint-plugin-react-refresh from 0.4.26 to 0.5.6 (#79)
 - Commit pnpm-lock.yaml for reproducible installs
@@ -180,6 +181,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
