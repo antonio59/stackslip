@@ -7,3 +7,7 @@ packageImportMethod: clone-or-copy
 
 allowBuilds:
   esbuild: true
+
+overrides:
+  source-map-js@^1: '>=1.2.2 <2'
+  zod@^4: '>=4.6.6 <5'
