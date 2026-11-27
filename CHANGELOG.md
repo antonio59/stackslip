@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
+- **deps**: Clear Dependabot and OSV security alerts (#89)
 - Use crypto.getRandomValues for receipt codes
 - Update ko-fi link to antoniojasmith
 - Adapt receipt styles to Tailwind v4, repair pnpm-workspace.yaml
@@ -182,6 +183,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
 - Update changelog [skip ci]
